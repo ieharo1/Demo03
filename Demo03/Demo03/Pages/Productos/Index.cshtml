@@ -1,0 +1,91 @@
+﻿@page
+@model Demo03.Pages.Productos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    int i = 0;
+}
+
+<h1 class="text-center">Productos</h1>
+
+
+<p>
+    <a class="btn btn-outline-dark" asp-page="Create">Create New</a>
+</p>
+<div>
+    <select class="form-select " asp-for="buscarcategoria" asp-items="Model.buscarcategorias">
+        <option value="">Todos los productos</option>
+    </select>
+    <p>Ingrese el nombre de la Categoria:</p>
+
+    <form class="d-flex">
+
+        <input type="text" asp-for="buscar" placeholder="Buscar Producto"/>
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
+    <br />
+ </div>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.producto[0].nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.producto[0].pvp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.producto[0].stock)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.producto[0].categoria)
+
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.producto[0].fecha_elaboracion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.producto[0].fecha_caducidad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.producto[0].descripcion)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.producto)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.pvp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.stock)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.nombrescategoria[i])
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fecha_elaboracion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fecha_caducidad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.descripcion)
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-dark" asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
+                        <a class="btn btn-outline-dark" asp-page="./Details" asp-route-id="@item.id">Details</a> |
+                        <a class="btn btn-outline-dark" asp-page="./Delete" asp-route-id="@item.id">Delete</a>
+                    </td>
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>

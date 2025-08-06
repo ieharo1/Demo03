@@ -1,0 +1,12 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT [producto].[id]
+      ,[producto].[nombre]
+      ,[producto].[pvp]
+      ,[producto].[stock]
+      ,[producto].[categoria]
+	  ,[categoria].[nombre]
+      ,[producto].[fecha_elaboracion]
+      ,[producto].[fecha_caducidad]
+      ,[producto].[descripcion]
+  FROM [hola].[dbo].[producto],[hola].[dbo].[categoria]
+  WHERE [categoria].[id]=[producto].[categoria]

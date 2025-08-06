@@ -1,0 +1,45 @@
+﻿@page
+@model Demo03.Pages.Categorias.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center">Categoria</h1>
+
+<p>
+    <a class="btn btn-outline-dark" asp-page="Create">Create New</a>
+</p>
+<div>
+    
+    <p>Ingrese el nombre de la Categoria:</p>
+    <form class="d-flex">
+        <input type="text" asp-for="searchstring" placeholder="Buscar Producto" />
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
+</div>
+<br />
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.categoria[0].nombre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.categoria) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                <a class="btn btn-outline-dark" asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
+                <a class="btn btn-outline-dark" asp-page="./Details" asp-route-id="@item.id">Details</a> |
+                <a class="btn btn-outline-dark" asp-page="./Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
