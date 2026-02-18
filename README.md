@@ -1,28 +1,41 @@
-# Demo03
+# 💻 Demo03 (C#)
 
-Proyecto C# de demostración para prácticas de programación estructurada.
+Proyecto C# de demostración para prácticas de programación desarrollado por **Isaac Esteban Haro Torres**.
 
-## Descripción
+---
+
+## 📝 Descripción
 
 Aplicación C# que muestra conceptos básicos de programación estructurada y manejo de datos.
 
-## Características
+---
+
+## ✨ Características
 
 - Ejemplos de estructuras de control
 - Manejo de variables y tipos de datos
 - Operaciones básicas de entrada/salida
 
-## Stack Tecnológico
+---
+
+## 🛠️ Stack Tecnológico
 
 - C# .NET Framework
 - Windows Forms
 
-## Autor
+---
 
-🧑‍💻 **Isaac Haro**
+## 👨‍💻 Desarrollado por Isaac Esteban Haro Torres
 
-Ingeniero en Sistemas · Full Stack · Automatización · Data
+**Ingeniero en Sistemas · Full Stack · Automatización · Data**
 
-## Licencia
+- 📧 Email: zackharo1@gmail.com
+- 📱 WhatsApp: 098805517
+- 💻 GitHub: https://github.com/ieharo1
+- 🌐 Portafolio: https://ieharo1.github.io/portafolio-isaac.haro/
 
-MIT — contribuciones bienvenidas 🚀
+---
+
+## 📄 Licencia
+
+© 2026 Isaac Esteban Haro Torres - Todos los derechos reservados.
